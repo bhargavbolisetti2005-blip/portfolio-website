@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  font-family: 'Poppins';
+}
+h1,h2,h3{
+  font-weight: 600;
+}
+p{
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Sticky Header */
+header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 8%;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff6b6b;
+}
+
+/* Full Page Sections */
+.section {
+  height: 100vh;
+  padding: 100px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.about {
+  background: linear-gradient(135deg,#ff9a9e,#fad0c4);
+}
+
+.section:nth-child(even) {
+  background: #f4f4f4;
+}
+
+/* About Layout */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+}
+
+.about img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease,box-shadow 0.3s ease;
+  cursor: pointer;
+}
+about-img img:hover{
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+
+}
+.about h1{
+  font-size: 40px;
+  margin-bottom: 15px;
+  
+}
+.about p{
+  font-size: 18px;
+}
+.skills {
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+.education-section {
+  min-height: 100vh;
+   padding: 100px 10%;
+  background: #f4f6f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edu-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.edu-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.edu-box {
+  background: white;
+  width: 280px;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.edu-box:hover {
+  transform: translateY(-10px);
+}
+
+.edu-box h2 {
+  margin-bottom: 10px;
+}
+
+.edu-box span {
+  display: block;
+  margin-top: 15px;
+  color: gray;
+}
+.contact {
+  min-height: 100vh;
+  padding: 100px 10%;
+  background: #f4f6f9;
+  color: #111;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Left info */
+.contact-info {
+  font-size: 18px;
+  text-align: left;
+  line-height: 2;
+}
+
+/* Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  background:#111;
+  color: whitesmoke;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: burlywood;
+}
+.footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .about-container,
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-content,
+  .contact-info {
+    text-align: center;
+  }
+}
